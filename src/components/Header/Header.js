@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import { liItems } from "../../assets/data";
 
@@ -10,7 +10,9 @@ const Header = () => {
   const menuRef = useRef();
   const menuNavRef = useRef();
   const menuBrandingRef = useRef();
-  const menuNavItems = document.querySelectorAll(".menu__nav-item");
+  const menuNavItemRef = useRef();
+  const currentRoute = useHistory().location.pathname.toLowerCase();
+  console.log(currentRoute);
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -21,8 +23,6 @@ const Header = () => {
       menuNavRef.current.classList.add("show");
       menuBrandingRef.current.classList.add("show");
 
-      menuNavItems.forEach((item) => item.classList.add("show"));
-
       setShowMenu(true);
     } else {
       menuBtnRef.current.classList.remove("close");
@@ -30,11 +30,16 @@ const Header = () => {
       menuNavRef.current.classList.remove("show");
       menuBrandingRef.current.classList.remove("show");
 
-      menuNavItems.forEach((item) => item.classList.remove("show"));
-
       setShowMenu(false);
     }
   };
+
+  //   const changeLinkColorHandler = () => {
+  //     console.log("hihi");
+  //     menuNavItemRef.forEach((item) => {
+  //       item.current.classList.add("yellow");
+  //     });
+  //   };
 
   return (
     <header className="header">
@@ -50,8 +55,17 @@ const Header = () => {
         </div>
         <ul className="menu__nav" ref={menuNavRef}>
           {liItems.map((item) => (
-            <li className="menu__nav-item">
-              <Link to="/" className="menu__nav-link">
+            <li
+              className="menu__nav-item"
+              ref={menuNavItemRef}
+              //   onClick={changeLinkColorHandler}
+            >
+              <Link
+                to="/"
+                className={`menu__nav-link ${
+                  currentRoute === "/" ? "acitve" : ""
+                }`}
+              >
                 {item}
               </Link>
             </li>
