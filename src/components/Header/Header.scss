@@ -1,0 +1,31 @@
+@import "../../sass/variables";
+
+.header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+
+  &__menu-btn {
+  }
+
+  &__btn-line {
+  }
+}
+
+.menu {
+  &__branding {
+  }
+
+  &__portrait {
+  }
+
+  &__nav {
+    &-item {
+    }
+
+    &-link {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
