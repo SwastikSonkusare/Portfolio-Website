@@ -12,7 +12,6 @@ const Header = () => {
   const menuBrandingRef = useRef();
   const menuNavItemRef = useRef();
   const currentRoute = useHistory().location.pathname.toLowerCase();
-  console.log(currentRoute);
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -34,12 +33,6 @@ const Header = () => {
     }
   };
 
-  //   const changeLinkColorHandler = () => {
-  //     console.log("hihi");
-  //     menuNavItemRef.forEach((item) => {
-  //       item.current.classList.add("yellow");
-  //     });
-  //   };
 
   return (
     <header className="header">
@@ -58,7 +51,6 @@ const Header = () => {
             <li
               className="menu__nav-item"
               ref={menuNavItemRef}
-              //   onClick={changeLinkColorHandler}
             >
               <Link
                 to="/"

@@ -61,6 +61,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
+  @media only screen and (max-width: 37.5em) {
+    display: flex;
+    flex-direction: column;
+  }
+
   &.show {
     visibility: visible;
   }
@@ -80,6 +85,11 @@
     background: $primary-color;
     transform: translate3d(0, 100%, 0);
 
+    @media only screen and (max-width: 37.5em) {
+      height: 25vh;
+      transform: translate3d(100%, 0, 0);
+    }
+
     &.show {
       transform: translate3d(0, 0, 0);
     }
@@ -94,12 +104,22 @@
     background-size: cover;
     border-radius: 50%;
     border: 3px solid $secondary-color;
+
+    @media only screen and (max-width: 37.5em) {
+      width: 150px;
+      height: 150px;
+    }
   }
 
   &__nav {
     list-style: none;
     background: darken($primary-color, 5);
     transform: translate3d(0, -100%, 0);
+
+    @media only screen and (max-width: 37.5em) {
+      height: 75vh;
+      transform: translate3d(-100%, 0, 0);
+    }
 
     &.show {
       transform: translate3d(0, 0, 0);
@@ -108,6 +128,10 @@
     &-item {
       transform: translate3d(600px, 0, 0);
       @include easeOut;
+
+      @media only screen and (max-width: 37.5em) {
+        transform: translate3d(-600px, 0, 0);
+      }
 
       .menu__nav.show & {
         transform: translate3d(0, 0, 0);

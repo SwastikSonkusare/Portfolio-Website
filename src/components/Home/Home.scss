@@ -2,11 +2,23 @@
 @import "../../sass/mixin";
 
 .home {
+  @media only screen and (max-width: 31.25em) {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
   &#home {
     overflow: hidden;
 
     .home__heading {
       margin-top: 20vh;
+
+      @media only screen and (max-width: 31.25em) {
+        line-height: 1;
+      }
     }
   }
 
