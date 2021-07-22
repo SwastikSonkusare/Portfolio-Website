@@ -1,0 +1,151 @@
+@import "../../sass/variables";
+@import "../../sass/mixin";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  & h1 {
+    text-align: center;
+    animation: moveInTop 1s ease-out;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2rem;
+    padding: 1rem;
+    overflow: hidden;
+    align-items: center;
+
+    & > div:first-child {
+    animation: moveInLeft 1s ease-out;
+    }
+
+    @media only screen and (max-width: 43.75em) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__bio {
+    & > h3 {
+      font-size: 4.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+    animation: moveInRight 1s ease-out;
+    
+  }
+  
+  & > p {
+    max-width: 50rem;
+    font-size: 2rem;
+    animation: moveInRight 1s ease-out;
+    }
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 30px;
+    padding: 1.2rem 2rem;
+    background-color: darken($secondary-color, 15);
+    cursor: pointer;
+    animation: moveInBottom 1s ease-out;
+    @include easeOut;
+
+    @media only screen and (max-width: 43.75em) {
+      margin: 2rem auto 0 auto;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+
+    &:active {
+      transform: translateY(-1px);
+    }
+
+    &::after {
+      content: "";
+      display: flex;
+      height: 100%;
+      width: 100%;
+      border-radius: 30px;
+      background-color: darken($secondary-color, 15);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      @include easeOut;
+    }
+
+    & > a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    &-icon {
+      color: lighten($primary-color, 1);
+    }
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
