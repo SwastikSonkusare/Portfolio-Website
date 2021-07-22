@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { socialMediaIcons } from "../../assets/data";
 
 import "./Home.scss";
+import Button from "../Button/Button";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
           </Link>
         ))}
       </div>
+      <Button />
     </main>
   );
 };

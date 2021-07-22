@@ -1,19 +1,9 @@
-import React, { useRef, useState } from "react";
-import { useHistory } from "react-router-dom";
-
-
-import resume from "../../assets/Swastik Sonkusare Resume.pdf";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
-
-import Header from "../Header/Header";
-
+import React from "react";
+import Button from "../Button/Button";
 
 import "./About.scss";
 
 const About = () => {
-
-
   return (
     <main id="about" className="about">
       <h1 className="home__heading">
@@ -30,16 +20,7 @@ const About = () => {
             <br />I am always eager to learn new skills and grow my technical
             skill set in a team-based atomosphere.
           </p>
-          <button className="about__button">
-            <a download="" href={resume}>
-              Download CV
-            </a>
-            <FontAwesomeIcon
-              icon={faDownload}
-              size="1x"
-              className="about__button-icon"
-            />
-          </button>
+          <Button />
         </div>
       </div>
     </main>

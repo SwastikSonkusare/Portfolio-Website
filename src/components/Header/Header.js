@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import { liItems } from "../../assets/data";
-import ToggleButton from "../ToggleButton/ToggleButton";
 
 import "./Header.scss";
 
