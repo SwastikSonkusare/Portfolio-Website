@@ -10,13 +10,23 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 
-
-export const logos = [
-    {
-      id: 1,
-      icon: fa
-    }
-  , faEnvelopeSquare, faPhone, faEnvelopeSquare];
+export const contactLogos = [
+  {
+    id: 1,
+    icon: faMapMarked,
+    content: "7/42, Bpcl Staff Colony, Chembur, Mumbai.",
+  },
+  {
+    id: 2,
+    icon: faEnvelopeSquare,
+    content: "swastik.sonkusare18@gmail.com",
+  },
+  {
+    id: 3,
+    icon: faPhone,
+    content: "+(91)-9930243701",
+  },
+];
 
 export const liItems = [
   {
