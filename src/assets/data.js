@@ -4,6 +4,20 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
+import {
+  faMapMarked,
+  faEnvelopeSquare,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
+
+
+export const logos = [
+    {
+      id: 1,
+      icon: fa
+    }
+  , faEnvelopeSquare, faPhone, faEnvelopeSquare];
+
 export const liItems = [
   {
     id: 1,

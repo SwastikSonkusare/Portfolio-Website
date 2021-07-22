@@ -1,0 +1,74 @@
+@import "../../sass/variables";
+@import "../../sass/mixin";
+
+.contact {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 2rem;
+  max-width: 60rem;
+
+  margin: 0 auto;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2rem;
+  }
+
+  &__logos {
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 2rem;
+
+  & > div {
+    display: flex;
+    grid-gap: 1rem;
+  }
+
+  &__input,
+  &__text-area {
+    border: none;
+    border-radius: 5px;
+    padding: 1.2rem 2rem;
+    color: #fff;
+    border: 3px solid $secondary-color;
+    background-color: darken($color-black, 5);
+    opacity: 0.8;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__text-area {
+  }
+
+  &__button {
+    display: flex;
+    grid-gap: 1rem;
+    align-self: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    padding: 1.2rem;
+    color: $primary-color;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    @include easeOut;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      transform: translateY(-1px);
+    }
+  }
+}

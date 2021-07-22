@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import { liItems } from "../../assets/data";
 
@@ -10,10 +10,10 @@ const Header = () => {
   const menuRef = useRef();
   const menuNavRef = useRef();
   const menuBrandingRef = useRef();
-  const menuNavItemRef = useRef();
   const currentRoute = useHistory().location.pathname.toLowerCase();
 
   const [showMenu, setShowMenu] = useState(false);
+
 
   const toggleMenu = () => {
     if (!showMenu) {
@@ -33,10 +33,9 @@ const Header = () => {
     }
   };
 
-
   return (
     <header className="header">
- <div className="header__menu-btn" ref={menuBtnRef} onClick={toggleMenu}>
+      <div className="header__menu-btn" ref={menuBtnRef} onClick={toggleMenu}>
         <div className="header__btn-line"></div>
         <div className="header__btn-line"></div>
         <div className="header__btn-line"></div>
@@ -47,19 +46,15 @@ const Header = () => {
         </div>
         <ul className="menu__nav" ref={menuNavRef}>
           {liItems.map((item) => (
-            <li
-              className="menu__nav-item"
-              ref={menuNavItemRef}
-              key={item.id}
-            >
-              <Link
-                to={item.link}
+            <li className="menu__nav-item" key={item.id}>
+              <a
+                href={item.link}
                 className={`menu__nav-link ${
                   currentRoute === item.link ? "active" : ""
                 }`}
               >
                 {item.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

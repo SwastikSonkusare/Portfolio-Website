@@ -7,7 +7,7 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 const Button = () => {
   return (
     <button className="about__button">
-      <a download="" href={resume}>
+      <a href={resume} download>
         Download CV
       </a>
       <FontAwesomeIcon
