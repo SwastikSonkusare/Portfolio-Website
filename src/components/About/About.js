@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { useHistory } from "react-router-dom";
+
 
 import resume from "../../assets/Swastik Sonkusare Resume.pdf";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+
+import Header from "../Header/Header";
+
 
 import "./About.scss";
 
 const About = () => {
+
+
   return (
     <main id="about" className="about">
       <h1 className="home__heading">

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import { liItems } from "../../assets/data";
+import ToggleButton from "../ToggleButton/ToggleButton";
 
 import "./Header.scss";
 
@@ -36,12 +37,11 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="header__menu-btn" ref={menuBtnRef} onClick={toggleMenu}>
+ <div className="header__menu-btn" ref={menuBtnRef} onClick={toggleMenu}>
         <div className="header__btn-line"></div>
         <div className="header__btn-line"></div>
         <div className="header__btn-line"></div>
       </div>
-
       <nav className="menu" ref={menuRef}>
         <div className="menu__branding" ref={menuBrandingRef}>
           <div className="menu__portrait"></div>
@@ -51,14 +51,15 @@ const Header = () => {
             <li
               className="menu__nav-item"
               ref={menuNavItemRef}
+              key={item.id}
             >
               <Link
-                to="/"
+                to={item.link}
                 className={`menu__nav-link ${
-                  currentRoute === "/" ? "acitve" : ""
+                  currentRoute === item.link ? "active" : ""
                 }`}
               >
-                {item}
+                {item.name}
               </Link>
             </li>
           ))}
