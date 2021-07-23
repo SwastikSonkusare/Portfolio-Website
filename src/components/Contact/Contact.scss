@@ -9,6 +9,13 @@
   grid-gap: 2rem;
   margin: 0 auto;
 
+  @media only screen and (max-width: 56.25em) {
+    flex-direction: column;
+    grid-gap: 4rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
@@ -19,6 +26,10 @@
     display: flex;
     grid-gap: 1rem;
     align-items: center;
+
+    @media only screen and (max-width: 56.25em) {
+      justify-content: center;
+    }
   }
 
   &__content {
@@ -36,6 +47,10 @@
   & > div {
     display: flex;
     grid-gap: 1rem;
+
+    @media only screen and (max-width: 31.25em) {
+      flex-direction: column;
+    }
   }
 
   &__input,

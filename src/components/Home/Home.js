@@ -8,6 +8,8 @@ import "./Home.scss";
 import Button from "../Button/Button";
 
 const Home = () => {
+  const noMargin = true;
+
   return (
     <main id="home" className="home">
       <h1 className="home__heading">
@@ -22,7 +24,7 @@ const Home = () => {
           </Link>
         ))}
       </div>
-      <Button />
+      <Button noMargin={noMargin} />
     </main>
   );
 };

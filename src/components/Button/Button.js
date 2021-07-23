@@ -4,9 +4,9 @@ import resume from "../../assets/Swastik Sonkusare Resume.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
-const Button = () => {
+const Button = ({ noMargin }) => {
   return (
-    <button className="about__button">
+    <button className={`about__button ${noMargin && "home__margin"}`}>
       <a href={resume} download>
         Download CV
       </a>
