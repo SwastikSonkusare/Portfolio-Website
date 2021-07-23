@@ -16,6 +16,10 @@
     padding: 0 1rem;
   }
 
+  @media only screen and (max-width: 31.25em) {
+    align-items: unset;
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
@@ -33,7 +37,7 @@
   }
 
   &__content {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 500;
     color: darken($secondary-color, 0.9);
   }
@@ -53,6 +57,13 @@
     }
   }
 
+  &__input {
+    @media only screen and (max-width: 31.25em) {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+
   &__input,
   &__text-area {
     border: none;
@@ -64,6 +75,15 @@
     opacity: 0.8;
     margin-bottom: 1rem;
     font-size: 1.3rem;
+
+    @media only screen and (max-width: 56.25em) {
+      font-size: 1.5rem;
+      padding: 1.5rem 2rem;
+    }
+
+    @media only screen and (max-width: 31.25em) {
+      font-size: 2rem;
+    }
 
     &:focus {
       outline: none;
@@ -87,6 +107,10 @@
     font-weight: 600;
     cursor: pointer;
     @include easeOut;
+
+    @media only screen and (max-width: 56.25em) {
+      font-size: 2rem;
+    }
 
     &:hover {
       transform: translateY(-3px);

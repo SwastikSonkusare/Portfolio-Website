@@ -16,12 +16,16 @@ html {
   font-size: 62.5%; //1rem = 10px
   min-height: 100vh;
 
-  @media only screen and (max-width: 25em) {
-    font-size: 41%; //1rem = 6.4px
-  }
-
   @media only screen and (min-width: 81.25em) {
     font-size: 70.5%; //1rem = 13.5px
+  }
+
+  @media only screen and (max-width: 29em) {
+    font-size: 48%; //1rem = 7.7px
+  }
+
+  @media only screen and (max-width: 25em) {
+    font-size: 40%; //1rem = 6.6px
   }
 }
 

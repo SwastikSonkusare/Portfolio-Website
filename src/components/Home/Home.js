@@ -20,7 +20,7 @@ const Home = () => {
       <div className="home__icons">
         {socialMediaIcons.map((icon) => (
           <Link to="#!">
-            <FontAwesomeIcon icon={icon} size="2x" />
+            <FontAwesomeIcon icon={icon} size="3x" />
           </Link>
         ))}
       </div>

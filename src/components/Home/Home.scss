@@ -38,6 +38,8 @@
   }
 
   &__sub-heading {
+    font-size: 2rem;
+    font-style: italic;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.3);
