@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 import { useToasts } from "react-toast-notifications";
-
 import emailjs from "emailjs-com";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+
+import Loader from "../Loader/Loader";
 
 import { contactLogos } from "../../assets/data";
 import iconError from "../../assets/images/icon-error.svg";
@@ -19,21 +19,26 @@ const Contact = () => {
   const [nameError, setNameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [messageError, setMessageError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const { addToast } = useToasts();
 
   const formHandler = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     if (!name) {
       setNameError(true);
+      setLoading(false);
     }
 
     if (!validateEmail(email)) {
       setEmailError(true);
+      setLoading(false);
     }
     if (!message) {
       setMessageError(true);
+      setLoading(false);
     }
 
     if (name && message && email) {
@@ -56,6 +61,7 @@ const Contact = () => {
             autoDismiss: true,
           });
 
+          setLoading(false);
           setName("");
           setEmail("");
           setMessage("");
@@ -138,10 +144,14 @@ const Contact = () => {
             </>
           )}
         </div>
-        <button className="form__button" type="submit">
-          Send
-          <FontAwesomeIcon icon={faPaperPlane} size="1x" />
-        </button>
+        {loading ? (
+          <Loader />
+        ) : (
+          <button className="form__button" type="submit">
+            Send
+            <FontAwesomeIcon icon={faPaperPlane} size="1x" />
+          </button>
+        )}
       </form>
     </div>
   );

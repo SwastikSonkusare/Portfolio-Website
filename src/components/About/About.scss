@@ -1,5 +1,6 @@
 @import "../../sass/variables";
 @import "../../sass/mixin";
+@import "../../sass/animations";
 
 .about {
   display: flex;
@@ -22,7 +23,7 @@
     align-items: center;
 
     & > div:first-child {
-    animation: moveInLeft 1s ease-out;
+      animation: moveInLeft 1s ease-out;
     }
 
     @media only screen and (max-width: 43.75em) {
@@ -38,14 +39,13 @@
       font-size: 4.5rem;
       font-weight: 400;
       text-transform: uppercase;
-    animation: moveInRight 1s ease-out;
-    
-  }
-  
-  & > p {
-    max-width: 50rem;
-    font-size: 2rem;
-    animation: moveInRight 1s ease-out;
+      animation: moveInRight 1s ease-out;
+    }
+
+    & > p {
+      max-width: 50rem;
+      font-size: 2rem;
+      animation: moveInRight 1s ease-out;
     }
   }
 
@@ -104,48 +104,5 @@
     &-icon {
       color: lighten($primary-color, 1);
     }
-  }
-}
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes moveInTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

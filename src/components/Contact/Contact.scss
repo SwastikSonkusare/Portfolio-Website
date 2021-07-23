@@ -34,7 +34,7 @@
 
   &__content {
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 500;
     color: darken($secondary-color, 0.9);
   }
 }
@@ -44,7 +44,7 @@
   flex-direction: column;
   grid-gap: 2rem;
 
-  & > div {
+  & > div:nth-child(1) {
     display: flex;
     grid-gap: 1rem;
 
@@ -57,12 +57,13 @@
   &__text-area {
     border: none;
     border-radius: 5px;
-    padding: 2rem 2.5rem;
+    padding: 1.2rem 2.5rem;
     color: #fff;
     border: 3px solid $secondary-color;
     background-color: darken($color-black, 5);
     opacity: 0.8;
     margin-bottom: 1rem;
+    font-size: 1.3rem;
 
     &:focus {
       outline: none;
@@ -78,7 +79,7 @@
     grid-gap: 1rem;
     align-self: center;
     align-items: center;
-    border: none;
+    border: 3px solid $secondary-color;
     border-radius: 10px;
     padding: 1.2rem 2rem;
     color: $primary-color;
@@ -121,7 +122,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  box-shadow: 0 0 0px 1000px #333 inset;
-  -webkit-box-shadow: 0 0 0px 1000px #333 inset;
+  box-shadow: 0 0 0px 1000px #000 inset;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
   -webkit-text-fill-color: #fff !important;
 }
