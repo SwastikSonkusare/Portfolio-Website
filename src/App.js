@@ -10,13 +10,15 @@ import Header from "./components/Header/Header";
 
 const App = () => {
   return (
-    <Router>
-      <Header />
-      <Route path="/" exact component={HomeScreen} />
-      <Route path="/about"  exact component={AboutScreen} />
-      <Route path="/my-work" exact  component={MyWorkScreen} />
-      <Route path="/reach-me" exact  component={ContactScreen} />
-    </Router>
+    <>
+      <Router>
+        <Header />
+        <Route path="/" exact component={HomeScreen} />
+        <Route path="/about" exact component={AboutScreen} />
+        <Route path="/my-work" exact component={MyWorkScreen} />
+        <Route path="/reach-me" exact component={ContactScreen} />
+      </Router>
+    </>
   );
 };
 

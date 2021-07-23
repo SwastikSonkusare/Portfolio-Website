@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 
+import { useToasts } from "react-toast-notifications";
+
+import emailjs from "emailjs-com";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 import { contactLogos } from "../../assets/data";
+import iconError from "../../assets/images/icon-error.svg";
 
 import "./Contact.scss";
 
@@ -11,25 +16,57 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  // const [error, setError] = useState(false);
+  const [nameError, setNameError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [messageError, setMessageError] = useState(false);
+
+  const { addToast } = useToasts();
 
   const formHandler = (e) => {
     e.preventDefault();
 
-    if (!name.value) {
-      // firstNameError.classList.toggle("visible");
-      // field1.classList.toggle("visible");
+    if (!name) {
+      setNameError(true);
     }
 
-    if (!validateEmail(email.value)) {
-      // emailError.classList.toggle("visible");
-      // field3.classList.toggle("visible");
+    if (!validateEmail(email)) {
+      setEmailError(true);
+    }
+    if (!message) {
+      setMessageError(true);
     }
 
-    if (!message.value) {
-      // passwordError.classList.toggle("visible");
-      // field4.classList.toggle("visible");
+    if (name && message && email) {
+      sendEmail(e);
     }
+  };
+
+  const sendEmail = (e) => {
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_USER_ID
+      )
+      .then(
+        (result) => {
+          addToast("Your message has been sent successfully", {
+            appearance: "success",
+            autoDismiss: true,
+          });
+
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        (error) => {
+          addToast(error, {
+            appearance: "error",
+            autoDismiss: true,
+          });
+        }
+      );
   };
 
   const validateEmail = (email) => {
@@ -51,32 +88,56 @@ const Contact = () => {
 
       <form className="form" action="" method="post" onSubmit={formHandler}>
         <div>
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="form__input"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="form__input"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+          <div className="form__control">
+            <input
+              name="name"
+              type="text"
+              placeholder="Your Name"
+              className="form__input"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            {nameError && (
+              <>
+                <img src={iconError} alt=""></img>
+                <small>Name cannot be empty</small>
+              </>
+            )}
+          </div>
+          <div className="form__control">
+            <input
+              name="email"
+              type="email"
+              placeholder="Your Email"
+              className="form__input"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            {emailError && (
+              <>
+                <img src={iconError} alt=""></img>
+                <small>Looks like this is not an email</small>
+              </>
+            )}
+          </div>
         </div>
-        <textarea
-          name="message"
-          rows="5"
-          placeholder="Your Message"
-          required
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="form__text-area"
-        ></textarea>
+
+        <div className="form__control">
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            className="form__text-area"
+          ></textarea>
+          {messageError && (
+            <>
+              <img src={iconError} alt=""></img>
+              <small>Message cannot be empty</small>
+            </>
+          )}
+        </div>
         <button className="form__button" type="submit">
           Send
           <FontAwesomeIcon icon={faPaperPlane} size="1x" />

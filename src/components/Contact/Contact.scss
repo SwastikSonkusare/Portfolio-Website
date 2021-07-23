@@ -22,8 +22,8 @@
   }
 
   &__content {
-    font-size: 1.4rem;
-    font-weight: 400;
+    font-size: 1.8rem;
+    font-weight: 600;
     color: darken($secondary-color, 0.9);
   }
 }
@@ -42,11 +42,12 @@
   &__text-area {
     border: none;
     border-radius: 5px;
-    padding: 1.2rem 2rem;
+    padding: 2rem 2.5rem;
     color: #fff;
     border: 3px solid $secondary-color;
     background-color: darken($color-black, 5);
     opacity: 0.8;
+    margin-bottom: 1rem;
 
     &:focus {
       outline: none;
@@ -54,6 +55,7 @@
   }
 
   &__text-area {
+    width: 100%;
   }
 
   &__button {
@@ -78,4 +80,33 @@
       transform: translateY(-1px);
     }
   }
+
+  &__control {
+    position: relative;
+    & small {
+      display: flex;
+      position: absolute;
+      bottom: -1rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      font-style: italic;
+      color: red;
+    }
+
+    & img {
+      position: absolute;
+      top: 40%;
+      right: 1rem;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0px 1000px #333 inset;
+  -webkit-box-shadow: 0 0 0px 1000px #333 inset;
+  -webkit-text-fill-color: #fff !important;
 }
