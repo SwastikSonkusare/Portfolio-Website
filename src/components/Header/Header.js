@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { useHistory } from "react-router-dom";
 
 import { liItems } from "../../assets/data";
 
@@ -10,10 +9,9 @@ const Header = () => {
   const menuRef = useRef();
   const menuNavRef = useRef();
   const menuBrandingRef = useRef();
-  const currentRoute = useHistory().location.pathname.toLowerCase();
+  const currentRoute = window.location.pathname.toLowerCase();
 
   const [showMenu, setShowMenu] = useState(false);
-
 
   const toggleMenu = () => {
     if (!showMenu) {
