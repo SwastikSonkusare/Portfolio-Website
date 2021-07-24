@@ -11,8 +11,6 @@ const Header = () => {
   const menuBrandingRef = useRef();
   let currentRoute = window.location.pathname;
 
-  console.log(currentRoute);
-
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
