@@ -42,12 +42,12 @@ export const liItems = [
   {
     id: 3,
     name: "My Work",
-    link: "/my-work",
+    link: "/work",
   },
   {
     id: 4,
     name: "How to Reach Me",
-    link: "/reach-me",
+    link: "/contact",
   },
 ];
 

@@ -9,7 +9,9 @@ const Header = () => {
   const menuRef = useRef();
   const menuNavRef = useRef();
   const menuBrandingRef = useRef();
-  const currentRoute = window.location.pathname.toLowerCase();
+  let currentRoute = window.location.pathname;
+
+  console.log(currentRoute);
 
   const [showMenu, setShowMenu] = useState(false);
 
