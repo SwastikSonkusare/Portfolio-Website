@@ -8,6 +8,8 @@ import { techLogos } from "../../assets/data";
 import "./MyWork.scss";
 
 const MyWork = () => {
+  const tabTitle = ["Dynamic Web Page", "Static Web Page"];
+
   return (
     <>
       <main id="projects">
@@ -33,6 +35,11 @@ const MyWork = () => {
           </h1>
 
           <div className="projects__cards">
+            <div className="tab">
+              {tabTitle.map((title) => (
+                <button className="tab__title">{title}</button>
+              ))}
+            </div>
             <Card />
           </div>
         </div>

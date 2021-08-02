@@ -47,3 +47,29 @@
     }
   }
 }
+
+.projects {
+  & > h1 {
+    font-size: 4rem;
+  }
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #fdefef;
+  align-items: center;
+  grid-gap: 1.5rem;
+  max-width: 40rem;
+  margin: 0 auto;
+
+  &__title {
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff5ab;
+    padding: 1.2rem 1.5rem;
+    border: none;
+    cursor: pointer;
+  }
+}
