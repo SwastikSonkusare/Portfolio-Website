@@ -20,6 +20,8 @@ import {
   faBitbucket,
 } from "@fortawesome/free-brands-svg-icons";
 
+
+
 export const techLogos = [
   {
     id: 1,
