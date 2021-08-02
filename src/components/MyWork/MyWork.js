@@ -1,19 +1,40 @@
 import React from "react";
 import Card from "../Card/Card";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { techLogos } from "../../assets/data";
+
 import "./MyWork.scss";
 
 const MyWork = () => {
   return (
     <>
-      <main id="projects" className="projects">
-        <h1 className="home__heading">
-          My <span className="home__heading--secondary">Work</span>
-        </h1>
-        <h2 className="home__sub-heading">Check out some of my work...</h2>
+      <main id="projects">
+        <div className="technology">
+          <h1 className="home__heading">
+            Technologies{" "}
+            <span className="home__heading--secondary">that I know</span>
+          </h1>
 
-        <div className="projects__cards">
-          <Card />
+          <div className="technology__container">
+            {techLogos.map((logo) => (
+              <div key={logo.id}>
+                <FontAwesomeIcon icon={logo.icon} size="4x" />
+                <small>{logo.content}</small>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="projects">
+          <h1 className="home__heading">
+            Check out{" "}
+            <span className="home__heading--secondary">some of my work</span>
+          </h1>
+
+          <div className="projects__cards">
+            <Card />
+          </div>
         </div>
       </main>
     </>
