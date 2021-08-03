@@ -98,7 +98,7 @@
   &__portrait {
     width: 250px;
     height: 250px;
-    background-image: url(../../assets/images/radu-florin-JyVcAIUAcPM-unsplash.jpg);
+    background-image: url(../../assets/images/swastik.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -157,7 +157,6 @@
 
       &:hover {
         transform: translateY(-3px);
-        color: $secondary-color;
       }
     }
   }
