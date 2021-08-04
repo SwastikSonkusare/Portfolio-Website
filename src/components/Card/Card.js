@@ -2,9 +2,12 @@ import React from "react";
 
 import "./Card.scss";
 
-const Card = ({ project }) => {
+const Card = ({ project, toggle }) => {
   return (
-    <div className="card" key={project.id}>
+    <div
+      className={toggle === project.tabHeader ? "card active" : "card"}
+      key={project.title}
+    >
       <img className="card__image" src={project.image} alt="logo" />
       <span className="card__heading">{project.title}</span>
       <p className="card__paragraph">{project.content}</p>
@@ -13,7 +16,7 @@ const Card = ({ project }) => {
         <span>Stack</span>
         <div>
           {project.tools.map((tool) => (
-            <small>{tool}</small>
+            <small key={tool}>{tool}</small>
           ))}
         </div>
       </div>

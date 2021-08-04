@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../Card/Card";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +9,7 @@ import "./MyWork.scss";
 
 const MyWork = () => {
   const tabTitle = ["Dynamic Web Page", "Static Web Page"];
+  const [toggle, setToggle] = useState("Dynamic Web Page");
 
   return (
     <>
@@ -37,12 +38,19 @@ const MyWork = () => {
           <div className="projects__cards">
             <div className="tab">
               {tabTitle.map((title) => (
-                <button className="tab__title">{title}</button>
+                <button
+                  className={
+                    toggle === title ? "tab__title active" : "tab__title"
+                  }
+                  onClick={() => setToggle(title)}
+                >
+                  {title}
+                </button>
               ))}
             </div>
             <div className="projects__container">
               {projects.map((project) => (
-                <Card project={project} />
+                <Card project={project} toggle={toggle} />
               ))}
             </div>
           </div>

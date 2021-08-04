@@ -77,7 +77,7 @@ export const techLogos = [
     content: "Npm",
   },
   {
-    id: 7,
+    id: 9,
     icon: faYarn,
     content: "Yarn",
   },
