@@ -1,0 +1,90 @@
+@import "../../sass/variables";
+
+.card {
+  margin-block-start: 2rem;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
+
+  &__image {
+    display: block;
+    width: 100%;
+    max-height: 40vh;
+    background-size: cover;
+  }
+
+  &__heading {
+    margin-top: 1rem;
+    display: block;
+    font-size: 1.5rem;
+    color: $secondary-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  &__paragraph {
+    font-size: 1.4rem;
+    font-weight: 700;
+    max-width: 40rem;
+    margin: 0 auto;
+    color: #fcd8d4;
+    letter-spacing: 2px;
+    line-height: 1.5;
+  }
+
+  &__tools {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+
+    & > span {
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+    }
+
+    & * small {
+      display: block;
+      font-size: 1.5rem;
+      color: darken($secondary-color, 0.5);
+      letter-spacing: 2px;
+      font-weight: 500;
+    }
+
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto 0;
+    margin-block: 2rem;
+
+    & > button {
+      padding: 1rem 2rem;
+      border: none;
+      background: #6b3030;
+      border-radius: 10px;
+      transition: 0.5s;
+
+      & > a {
+        text-decoration: none;
+        color: #d4c0c0;
+        font-size: 1.6rem;
+      }
+      &:hover {
+        background: #801414;
+      }
+    }
+  }
+}

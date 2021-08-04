@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { techLogos } from "../../assets/data";
+import { techLogos, projects } from "../../assets/data";
 
 import "./MyWork.scss";
 
@@ -40,7 +40,11 @@ const MyWork = () => {
                 <button className="tab__title">{title}</button>
               ))}
             </div>
-            <Card />
+            <div className="projects__container">
+              {projects.map((project) => (
+                <Card project={project} />
+              ))}
+            </div>
           </div>
         </div>
       </main>

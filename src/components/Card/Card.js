@@ -1,17 +1,29 @@
 import React from "react";
 
-const Card = () => {
+import "./Card.scss";
+
+const Card = ({ project }) => {
   return (
-    <div className="card">
-      <img className="card__image" src></img>
-      <span className="card__heading"></span>
-      <p className="card__paragraph"></p>
+    <div className="card" key={project.id}>
+      <img className="card__image" src={project.image} alt="logo" />
+      <span className="card__heading">{project.title}</span>
+      <p className="card__paragraph">{project.content}</p>
+
+      <div className="card__tools">
+        <span>Stack</span>
+        <div>
+          {project.tools.map((tool) => (
+            <small>{tool}</small>
+          ))}
+        </div>
+      </div>
+
       <div className="card__details">
         <button>
-          <a>Source Code</a>
+          <a href={project.code}>Code</a>
         </button>
         <button>
-          <a>Live Demo</a>
+          <a href={project.liveDemo}>Live Demo</a>
         </button>
       </div>
     </div>
