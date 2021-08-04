@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { socialMediaIcons } from "../../assets/data";
@@ -19,9 +18,9 @@ const Home = () => {
 
       <div className="home__icons">
         {socialMediaIcons.map((icon) => (
-          <Link to="#!" >
-            <FontAwesomeIcon icon={icon} size="3x" />
-          </Link>
+          <a href={icon.link} key={icon.id}>
+            <FontAwesomeIcon icon={icon.logo} size="3x" />
+          </a>
         ))}
       </div>
       <Button noMargin={noMargin} />

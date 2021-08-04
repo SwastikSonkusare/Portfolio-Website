@@ -124,7 +124,23 @@ export const liItems = [
   },
 ];
 
-export const socialMediaIcons = [faLinkedin, faInstagram, faGithub];
+export const socialMediaIcons = [
+  {
+    id: 1,
+    logo: faLinkedin,
+    link: "https://www.linkedin.com/in/swastik-sonkusare-2b8679176",
+  },
+  {
+    id: 2,
+    logo: faGithub,
+    link: "https://github.com/SwastikSonkusare",
+  },
+  {
+    id: 3,
+    logo: faInstagram,
+    link: "https://www.instagram.com/fire_bolt17/",
+  },
+];
 
 export const projects = [
   {
