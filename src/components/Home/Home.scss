@@ -37,6 +37,10 @@
     &--secondary {
       color: $secondary-color;
 
+      @media only screen and (max-width: 37.5em) {
+        display: block;
+      }
+
       & > span {
         position: relative;
         display: inline-block;
