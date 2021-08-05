@@ -21,6 +21,7 @@ const Projects = () => {
             <button
               className={toggle === title ? "tab__title active" : "tab__title"}
               onClick={() => setToggle(title)}
+              key={title}
             >
               {title}
             </button>
