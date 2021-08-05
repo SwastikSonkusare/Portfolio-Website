@@ -1,5 +1,6 @@
 @import "../../sass/variables";
 @import "../../sass/mixin";
+@import "../../sass/animations";
 
 .home {
   @media only screen and (max-width: 31.25em) {
@@ -31,9 +32,28 @@
 
   &__heading {
     font-size: 6rem;
+    cursor: pointer;
 
     &--secondary {
       color: $secondary-color;
+
+      & > span {
+        position: relative;
+        display: inline-block;
+
+        &:hover {
+          animation: textBounce 2.5s linear;
+        }
+      }
+    }
+
+    & > span:not(:last-child) {
+      position: relative;
+      display: inline-block;
+
+      &:hover {
+        animation: textBounce 2.5s linear;
+      }
     }
   }
 

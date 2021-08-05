@@ -8,11 +8,20 @@ import Button from "../Button/Button";
 
 const Home = () => {
   const noMargin = true;
+  const name = ["S", "w", "a", "s", "t", "i", "k"];
+  const surname = ["S", "o", "n", "k", "u", "s", "a", "r", "e"];
 
   return (
     <main id="home" className="home">
       <h1 className="home__heading">
-        Swastik <span className="home__heading--secondary">Sonkusare</span>
+        {name.map((n) => (
+          <span>{n}</span>
+        ))}{" "}
+        <span className="home__heading--secondary">
+          {surname.map((sn) => (
+            <span>{sn}</span>
+          ))}
+        </span>
       </h1>
       <h2 className="home__sub-heading">Web Developer</h2>
 
