@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 
 import { liItems } from "../../assets/data";
 
+import logo from "../../assets/images/logo.png";
 import "./Header.scss";
 
 const Header = () => {
@@ -33,6 +34,9 @@ const Header = () => {
 
   return (
     <header className="header">
+      <a href="/">
+        <img src={logo} alt="logo"></img>
+      </a>
       <div className="header__menu-btn" ref={menuBtnRef} onClick={toggleMenu}>
         <div className="header__btn-line"></div>
         <div className="header__btn-line"></div>
