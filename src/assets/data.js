@@ -204,7 +204,7 @@ export const projects = [
     title: "Todo App",
     tools: ["Html", "Css", "Sass", "React"],
     content:
-      "A simple todo app build using html, css/sass and react. A user can create, delete and save a todo.",
+      "A simple todo app with dark and light theme build using html, css/sass and react. A user can create, delete and save a todo.",
     liveDemo: "https://todo-app-jsx.netlify.app/",
     code: "https://github.com/SwastikSonkusare/Todo-App",
   },
