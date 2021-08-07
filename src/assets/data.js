@@ -174,7 +174,7 @@ export const projects = [
     content:
       "An Ip Address Tracker which tracks your location using IP GeoLocation API and generated map using react-google-maps",
     liveDemo: "https://ip-address-tracker-jsx.netlify.app/",
-    code: "https://github.com/SwastikSonkusare/Youtube-API",
+    code: "https://github.com/SwastikSonkusare/IP-Address-Tracker",
   },
   {
     id: 4,
@@ -184,7 +184,7 @@ export const projects = [
     tools: ["Html", "Css", "Javascript"],
     content: "A youtube-clone-api where user can search and watch videos.",
     liveDemo: "https://youtube-clone-api.netlify.app/",
-    code: "https://github.com/SwastikSonkusare/IP-Address-Tracker",
+    code: "https://github.com/SwastikSonkusare/Youtube-API",
   },
 
   {
