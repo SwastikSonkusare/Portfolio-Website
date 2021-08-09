@@ -97,7 +97,7 @@ export const contactLogos = [
   {
     id: 3,
     icon: faPhone,
-    content: "+(91)-9930243701",
+    content: "(+91)-9930243701",
   },
 ];
 
