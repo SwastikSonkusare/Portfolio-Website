@@ -25,8 +25,6 @@ import {
 import todoAppImage from "../assets/images/todo-app.png";
 import chatBotImage from "../assets/images/chatbot.png";
 import manageImage from "../assets/images/manage-landing-page.png";
-// import fyloImage from "../assets/images/static-webpage/fylo-landing-page.png";
-// import urlImage from "../assets/images/static-webpage/url-shortner.png";
 import mappin from "../assets/images/mappin.png";
 
 export const techLogos = [
