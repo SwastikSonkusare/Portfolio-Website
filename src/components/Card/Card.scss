@@ -30,6 +30,7 @@
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
+    text-align: center;
   }
 
   &__paragraph {
@@ -51,6 +52,7 @@
     & > span {
       font-size: 1.4rem;
       letter-spacing: 2px;
+      text-align: center;
     }
 
     & * small {

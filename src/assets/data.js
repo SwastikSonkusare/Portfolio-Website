@@ -22,18 +22,11 @@ import {
   faYarn,
 } from "@fortawesome/free-brands-svg-icons";
 
-import memoriesImage from "../assets/images/dynamic-webpage/memories-media.png";
-import blogImage from "../assets/images/dynamic-webpage/blog.png";
-import ipAddressImage from "../assets/images/dynamic-webpage/ip-address-tracker.png";
-import youtubeApiImage from "../assets/images/dynamic-webpage/api-youtube.png";
-import tipCalImage from "../assets/images/dynamic-webpage/tip-calc.png";
-import todoAppImage from "../assets/images/dynamic-webpage/todo-app.png";
-import countriesApiImage from "../assets/images/static-webpage/countries-apis-page.png";
-import bookmarkImage from "../assets/images/static-webpage/bookmark-landing-page.png";
-import fyloImage from "../assets/images/static-webpage/fylo-landing-page.png";
-import jobfilteringImage from "../assets/images/static-webpage/job-listing-filtering.png";
-import manageLandingImage from "../assets/images/static-webpage/manage-landing-page.png";
-import urlImage from "../assets/images/static-webpage/url-shortner.png";
+import todoAppImage from "../assets/images/todo-app.png";
+// import bookmarkImage from "../assets/images/static-webpage/bookmark-landing-page.png";
+// import fyloImage from "../assets/images/static-webpage/fylo-landing-page.png";
+// import urlImage from "../assets/images/static-webpage/url-shortner.png";
+import mappin from "../assets/images/mappin.png";
 
 export const techLogos = [
   {
@@ -145,60 +138,17 @@ export const socialMediaIcons = [
 export const projects = [
   {
     id: 1,
-    image: memoriesImage,
-    tabHeader: "Dynamic Web Page",
-    title: "Memories-Media",
-    tools: ["React", "Express", "Node", "Mongo", "Redux"],
+    image: mappin,
+    title: "Map-Pin!",
+    tools: ["React", "Express", "Node", "Mongo"],
     content:
-      "The App is called 'Memories-Media' and it is a social media app that allows users to post interesting events that happened in their lives. User can create, delete, update, and read their memories",
-    liveDemo: "https://memories-media-js.netlify.app/posts",
-    code: "https://github.com/SwastikSonkusare/Memories_Media",
-  },
-  {
-    id: 2,
-    image: blogImage,
-    tabHeader: "Dynamic Web Page",
-    title: "Blog",
-    tools: ["Javascript", "Express", "Node", "Mongo"],
-    content:
-      "A full stack web app where user can read, write, delete and update their blogs.",
-    liveDemo: "https://infinite-fortress-57913.herokuapp.com/blogs",
-    code: "https://github.com/SwastikSonkusare/Blog",
-  },
-  {
-    id: 3,
-    image: ipAddressImage,
-    tabHeader: "Dynamic Web Page",
-    title: "Ip Address Tracker",
-    tools: ["React", "Html", "Css", "Sass"],
-    content:
-      "An Ip Address Tracker which tracks your location using IP GeoLocation API and generated map using react-google-maps",
-    liveDemo: "https://ip-address-tracker-jsx.netlify.app/",
-    code: "https://github.com/SwastikSonkusare/IP-Address-Tracker",
-  },
-  {
-    id: 4,
-    image: youtubeApiImage,
-    tabHeader: "Dynamic Web Page",
-    title: "Youtube Api Clone",
-    tools: ["Html", "Css", "Javascript"],
-    content: "A youtube-clone-api where user can search and watch videos.",
-    liveDemo: "https://youtube-clone-api.netlify.app/",
-    code: "https://github.com/SwastikSonkusare/Youtube-API",
+      "The App is called Map-Pin! It allows user to pin any location and add details to that pin. It is MERN stack application which involves user authentication.",
+    liveDemo: "https://mappin-i9ma.onrender.com/",
+    code: "https://github.com/SwastikSonkusare/Map-Pin-frontend",
   },
 
   {
-    id: 5,
-    image: tipCalImage,
-    tabHeader: "Dynamic Web Page",
-    title: "Tip Calculator",
-    tools: ["Html", "Css", "Javascript"],
-    content: "A simple tip calculator build using html, css and javascript",
-    liveDemo: "https://tip-calc-fm.netlify.app/",
-    code: "https://github.com/SwastikSonkusare/Tip-Calc",
-  },
-  {
-    id: 6,
+    id: 2,
     image: todoAppImage,
     tabHeader: "Dynamic Web Page",
     title: "Todo App",
@@ -207,68 +157,5 @@ export const projects = [
       "A simple todo app with dark and light theme build using html, css/sass and react. A user can create, delete and save a todo.",
     liveDemo: "https://todo-app-jsx.netlify.app/",
     code: "https://github.com/SwastikSonkusare/Todo-App",
-  },
-  {
-    id: 7,
-    image: countriesApiImage,
-    tabHeader: "Static Web Page",
-    title: "REST Countries APIS",
-    tools: ["Html", "Css", "Sass", "React"],
-    content:
-      "A simple web app which pulls the data from rest countries api and displays it on the screen based on search and filtering",
-    liveDemo: "https://countries-apis.netlify.app/",
-    code: "https://github.com/SwastikSonkusare/REST-Countries-API",
-  },
-  {
-    id: 8,
-    image: bookmarkImage,
-    tabHeader: "Static Web Page",
-    title: "Bookmark Landing Page",
-    tools: ["Html", "Css", "Sass", "React"],
-    content: "A bookmark landing page build using html, css/sass and react",
-    liveDemo: "https://bookmark-landing-fm.netlify.app/",
-    code: "https://github.com/SwastikSonkusare/Bookmark-Landing-Page",
-  },
-  {
-    id: 9,
-    image: fyloImage,
-    tabHeader: "Static Web Page",
-    title: "Fylo Landing Page",
-    tools: ["Html", "Css", "Sass", "Javascript"],
-    content: "A landing page build using html, css/sass and react",
-    liveDemo: "https://fylo-landing-fm.netlify.app/",
-    code: "https://github.com/SwastikSonkusare/Fylo-dark-theme-landing-page",
-  },
-  {
-    id: 10,
-    image: jobfilteringImage,
-    tabHeader: "Static Web Page",
-    title: "Job Filtering Listing",
-    tools: ["Html", "Css", "Sass", "React"],
-    content:
-      "A web app which filters and display the data based on user's selection for jobs. It build using html, css/sass and react",
-    liveDemo: "https://job-listing-fm.netlify.app/",
-    code: "https://github.com/SwastikSonkusare/Job-listing-with-filtering",
-  },
-  {
-    id: 11,
-    image: manageLandingImage,
-    tabHeader: "Static Web Page",
-    title: "Manage Landing Page",
-    tools: ["Html", "Css", "Sass", "React"],
-    content: "A manage landing page build using html, css/sass and react",
-    liveDemo: "https://manage-landing-page-fm.netlify.app/",
-    code: "https://github.com/SwastikSonkusare/Manage-Landing-Page",
-  },
-  {
-    id: 12,
-    image: urlImage,
-    tabHeader: "Static Web Page",
-    title: "Url Shortner",
-    tools: ["Html", "Css", "Sass", "React"],
-    content:
-      "An url shortner web app which shortnes the url based on the input. It shortnes the url using shrtcode api and gives the result.",
-    liveDemo: "https://url-shortening-page.netlify.app/",
-    code: "https://github.com/SwastikSonkusare/URL-shortening-API-landing-page",
   },
 ];

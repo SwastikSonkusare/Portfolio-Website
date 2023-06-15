@@ -5,7 +5,7 @@ import "./Card.scss";
 const Card = ({ project, toggle }) => {
   return (
     <div
-      className={toggle === project.tabHeader ? "card active" : "card"}
+      // className={toggle === project.tabHeader ? "card active" : "card"}
       key={project.title}
     >
       <img className="card__image" src={project.image} alt="logo" />

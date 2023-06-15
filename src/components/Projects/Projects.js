@@ -6,8 +6,6 @@ import Card from "../Card/Card";
 import { projects } from "../../assets/data";
 
 const Projects = () => {
-  const tabTitle = ["Dynamic Web Page", "Static Web Page"];
-  const [toggle, setToggle] = useState("Dynamic Web Page");
   return (
     <div className="projects">
       <h1 className="home__heading">
@@ -16,20 +14,9 @@ const Projects = () => {
       </h1>
 
       <div className="projects__cards">
-        <div className="tab">
-          {tabTitle.map((title) => (
-            <button
-              className={toggle === title ? "tab__title active" : "tab__title"}
-              onClick={() => setToggle(title)}
-              key={title}
-            >
-              {title}
-            </button>
-          ))}
-        </div>
         <div className="projects__container">
           {projects.map((project) => (
-            <Card project={project} toggle={toggle} />
+            <Card project={project} />
           ))}
         </div>
       </div>
