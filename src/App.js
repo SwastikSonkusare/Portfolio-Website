@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import HomeScreen from "./screens/HomeScreen";
 import AboutScreen from "./screens/AboutScreen";
@@ -11,13 +11,13 @@ import Header from "./components/Header/Header";
 const App = () => {
   return (
     <>
-      <Router>
-        <Header />
-        <Route path="/" exact component={HomeScreen} />
-        <Route path="/about" component={AboutScreen} />
-        <Route path="/work" component={MyWorkScreen} />
-        <Route path="/contact" component={ContactScreen} />
-      </Router>
+      <Header />
+      <Routes>
+        <Route path="/" exact element={<HomeScreen />} />
+        <Route path="/about" element={<AboutScreen />} />
+        <Route path="/work" element={<MyWorkScreen />} />
+        <Route path="/contact" element={<ContactScreen />} />
+      </Routes>
     </>
   );
 };

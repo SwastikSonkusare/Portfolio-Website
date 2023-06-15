@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Loader from "../Loader/Loader";
 
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import iconError from "../../assets/images/icon-error.svg";
+// import iconError from "../../assets/images/icon-error.svg";
 
 import "./Form.scss";
 
@@ -92,7 +92,7 @@ const Form = () => {
           />
           {nameError && (
             <>
-              <img src={iconError} alt="icon"></img>
+              {/* <img src={iconError} alt="icon"></img> */}
               <small>Name cannot be empty</small>
             </>
           )}
@@ -108,7 +108,7 @@ const Form = () => {
           />
           {emailError && (
             <>
-              <img src={iconError} alt="icon"></img>
+              {/* <img src={iconError} alt="icon"></img> */}
               <small>Looks like this is not an email</small>
             </>
           )}
@@ -126,7 +126,7 @@ const Form = () => {
         ></textarea>
         {messageError && (
           <>
-            <img src={iconError} alt="icon"></img>
+            {/* <img src={iconError} alt="icon"></img> */}
             <small>Message cannot be empty</small>
           </>
         )}
