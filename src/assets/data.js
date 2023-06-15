@@ -23,7 +23,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import todoAppImage from "../assets/images/todo-app.png";
-// import bookmarkImage from "../assets/images/static-webpage/bookmark-landing-page.png";
+import chatBotImage from "../assets/images/chatbot.png";
+import manageImage from "../assets/images/manage-landing-page.png";
 // import fyloImage from "../assets/images/static-webpage/fylo-landing-page.png";
 // import urlImage from "../assets/images/static-webpage/url-shortner.png";
 import mappin from "../assets/images/mappin.png";
@@ -149,13 +150,32 @@ export const projects = [
 
   {
     id: 2,
+    image: chatBotImage,
+    title: "ChatBot",
+    tools: ["Html", "Css", "React"],
+    content:
+      "This is a simple chatbot app ChatBotdemo. It is build using html, css, javascript, react, react-router-dom and react-chatbot-kit",
+    liveDemo: " https://chatbotdemo.netlify.app/",
+    code: "https://github.com/SwastikSonkusare/Chat-bot",
+  },
+  {
+    id: 3,
     image: todoAppImage,
-    tabHeader: "Dynamic Web Page",
     title: "Todo App",
     tools: ["Html", "Css", "Sass", "React"],
     content:
       "A simple todo app with dark and light theme build using html, css/sass and react. A user can create, delete and save a todo.",
     liveDemo: "https://todo-app-jsx.netlify.app/",
     code: "https://github.com/SwastikSonkusare/Todo-App",
+  },
+  {
+    id: 4,
+    image: manageImage,
+    title: "Landing Page",
+    tools: ["Html", "Css", "Sass", "React"],
+    content:
+      "A landing page for a fictional company built using Html, Css/Sass, React.",
+    liveDemo: "https://manage-landing-page-fm.netlify.app/",
+    code: "https://github.com/SwastikSonkusare/Manage-Landing-Page",
   },
 ];
