@@ -1,6 +1,6 @@
 import React from "react";
 
-import resume from "../../assets/Swastik_Sonkusare_Resume.pdf";
+import resume from "../../assets/Swastik_Sonkusare.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
