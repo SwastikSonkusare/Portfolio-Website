@@ -26,6 +26,7 @@ import todoAppImage from "../assets/images/todo-app.png";
 import chatBotImage from "../assets/images/chatbot.png";
 import manageImage from "../assets/images/manage-landing-page.png";
 import mappin from "../assets/images/mappin.png";
+import contactImage from "../assets/images/contact-keeper.png";
 
 export const techLogos = [
   {
@@ -148,6 +149,27 @@ export const projects = [
 
   {
     id: 2,
+    image: contactImage,
+    title: "Contact Management App",
+    tools: [
+      "Html",
+      "Css",
+      "Javascript",
+      "React",
+      "react-query",
+      "react-router",
+      "react-leaflet",
+      "react-chartjs-2",
+      "json-server",
+    ],
+    content:
+      "A contact keeper app which allows user to create, read, update and delete this contact. The dashboard section of the app displays the graphs of world wide covid cases and country specific cases.",
+    liveDemo: "https://contacthubapp.netlify.app/",
+    code: "https://github.com/SwastikSonkusare/contact-data",
+  },
+
+  {
+    id: 3,
     image: chatBotImage,
     title: "ChatBot",
     tools: ["Html", "Css", "React"],
@@ -157,7 +179,7 @@ export const projects = [
     code: "https://github.com/SwastikSonkusare/Chat-bot",
   },
   {
-    id: 3,
+    id: 4,
     image: todoAppImage,
     title: "Todo App",
     tools: ["Html", "Css", "Sass", "React"],
@@ -167,7 +189,7 @@ export const projects = [
     code: "https://github.com/SwastikSonkusare/Todo-App",
   },
   {
-    id: 4,
+    id: 5,
     image: manageImage,
     title: "Landing Page",
     tools: ["Html", "Css", "Sass", "React"],
